@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         inputValue = Input.GetAxisRaw("Horizontal");
-        jump = Input.GetButtonDown("Jump");
+        jump = Input.GetButton("Jump");
     }
 
     private void FixedUpdate()
