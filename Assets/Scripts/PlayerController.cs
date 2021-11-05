@@ -19,12 +19,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         inputValue = Input.GetAxisRaw("Horizontal");
-        jump = Input.GetButton("Jump");
+        jump = Input.GetButtonDown("Jump");
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            PlayerStat.playerStat.InflictDamage(2);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            PlayerStat.playerStat.InflictDamage(1f);
+        }
     }
 
     private void FixedUpdate()
     {
         controller.Move(inputValue*force*Time.deltaTime, false, jump);
         jump = false;
+
     }
 }
