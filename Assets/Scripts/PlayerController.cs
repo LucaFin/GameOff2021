@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController2D controller;
     [SerializeField]
     private float force;
+    [SerializeField]
+    private GameObject shot;
     private float inputValue;
     private bool jump;
     // Start is called before the first frame update
@@ -22,7 +24,9 @@ public class PlayerController : MonoBehaviour
         jump = Input.GetButtonDown("Jump");
         if (Input.GetKeyDown(KeyCode.K))
         {
-            PlayerStat.playerStat.InflictDamage(2);
+            GameObject bullet = Instantiate<GameObject>(shot,transform.position, Quaternion.identity);
+            float direction = transform.localScale.x < 0 ? -1 : 1;
+            bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction*200f,0));
         }
         if (Input.GetKeyDown(KeyCode.L))
         {

@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStat : MonoBehaviour
+public class Stats : MonoBehaviour
 {
     [SerializeField]
-    private float life;
-    private float atkDamage;
-    public static PlayerStat playerStat;
-
-    private void Awake()
-    {
-        playerStat = this;
-    }
+    protected float life;
+    protected float atkDamage;
 
     public float GetDamage()
     {
@@ -23,10 +17,8 @@ public class PlayerStat : MonoBehaviour
     {
         return life;
     }
-
     public void InflictDamage(float damage)
     {
-        UIManager.uIManager.HeartDamage(damage);
         life -= damage;
     }
 }
