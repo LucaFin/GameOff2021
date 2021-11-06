@@ -24,8 +24,10 @@ public class PlayerController : MonoBehaviour
         jump = Input.GetButtonDown("Jump");
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GameObject bullet = Instantiate<GameObject>(shot,transform.position, Quaternion.identity);
+            GameObject bullet = Instantiate<GameObject>(shot,transform.position,Quaternion.identity);
             float direction = transform.localScale.x < 0 ? -1 : 1;
+            Vector3 scale = bullet.transform.localScale;
+            bullet.transform.localScale = new Vector3(scale.x*direction, scale.y, scale.z);
             bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction*200f,0));
         }
         if (Input.GetKeyDown(KeyCode.L))

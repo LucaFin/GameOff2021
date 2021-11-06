@@ -6,7 +6,7 @@ public class CheckCollideShot : MonoBehaviour
 {
     private void Start()
     {
-        Destroy(this.gameObject, 20f);
+        Destroy(this.gameObject, 10f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
