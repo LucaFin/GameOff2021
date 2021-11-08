@@ -11,9 +11,17 @@ public class PlayerController : MonoBehaviour
     private GameObject shot;
     private float inputValue;
     private bool jump;
+    private bool invincible=false;
+    private Color opaque;
+    private Color transparent;
+    private SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        opaque = spriteRenderer.color;
+        transparent = new Color(opaque.r, opaque.g, opaque.b, 0f);
         controller = this.GetComponent<CharacterController2D>();
     }
 
@@ -32,7 +40,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-            PlayerStat.playerStat.InflictDamage(1f);
+            TakeDamage(1f);
         }
     }
 
@@ -41,5 +49,41 @@ public class PlayerController : MonoBehaviour
         controller.Move(inputValue*force*Time.deltaTime, false, jump);
         jump = false;
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+
+    private IEnumerator Invincible()
+    {
+        invincible = true;
+        for(int i=0;i<8;i++)
+        {
+            spriteRenderer.color = spriteRenderer.color.a == 0 ? opaque : transparent;
+            yield return new WaitForSeconds(0.3f);
+        }
+        spriteRenderer.color = opaque;
+        invincible = false;
+        
+    }
+
+    private void TakeDamage(float damage)
+    {
+        if (!invincible)
+        {
+            PlayerStat.playerStat.InflictDamage(damage);
+            StartCoroutine(Invincible());
+        }
     }
 }
