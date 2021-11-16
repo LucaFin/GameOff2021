@@ -84,6 +84,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -604,6 +605,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      spiderbot_4: -784405194321539935
+      spiderbot_12: -3700021005849004848
+      spiderbot_2: 4171876463558680537
+      spiderbot_9: 1830313161778110103
+      spiderbot_5: -8582968856138384268
+      spiderbot_17: -508629939357057148
+      spiderbot_15: 8991163031206136552
+      spiderbot_13: -635313088813738829
+      spiderbot_14: 5282698888573069593
+      spiderbot_1: -2102253663173537295
+      spiderbot_0: 8452824215773846641
+      spiderbot_10: -2769804668208276937
+      spiderbot_18: -606992754771421216
+      spiderbot_6: -1914843842960940764
+      spiderbot_11: 3790455558173002468
+      spiderbot_7: 8279085266184153566
+      spiderbot_19: 1351868617771038333
+      spiderbot_8: 5857842161836371333
+      spiderbot_16: -7461938367899642368
+      spiderbot_3: 7359579170421628596
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
