@@ -30,8 +30,10 @@ public class PlayerController : MonoBehaviour
     {
         inputValue = Input.GetAxisRaw("Horizontal");
         jump = Input.GetButtonDown("Jump");
+        
         if (Input.GetKeyDown(KeyCode.K))
         {
+            
             GameObject bullet = Instantiate<GameObject>(shot,transform.position,Quaternion.identity);
             float direction = transform.localScale.x < 0 ? -1 : 1;
             Vector3 scale = bullet.transform.localScale;
