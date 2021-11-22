@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Pacman.unity
+    guid: bdb5039e2dfb657458ff061993a2d72f
+  - enabled: 0
+    path: Assets/Scenes/Maze1.unity
+    guid: a2cbccea4288c894dbbdf634beaaeb00
+  - enabled: 0
+    path: Assets/Scenes/Maze2.unity
+    guid: cfe5262989ed3a3479e2eef23a1d3a84
+  - enabled: 0
+    path: Assets/Scenes/Maze3.unity
+    guid: cc313c79291447c40b124ee4bf1da6f7
+  - enabled: 0
+    path: Assets/Scenes/ProvaMaicol.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
