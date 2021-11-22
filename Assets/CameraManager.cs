@@ -11,27 +11,32 @@ public class CameraManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            foreach (GameObject camera in cameras)
-            {
-                camera.SetActive(false);
-            }
-            cameras[0].SetActive(true);
+            loadCamera(0);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            foreach (GameObject camera in cameras)
-            {
-                camera.SetActive(false);
-            }
-            cameras[1].SetActive(true);
+            loadCamera(1);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            foreach (GameObject camera in cameras)
-            {
-                camera.SetActive(false);
-            }
-            cameras[2].SetActive(true);
+            loadCamera(2);
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            loadCamera(3);
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            loadCamera(4);
+        }
+    }
+
+    public void loadCamera(int index)
+    {
+        foreach (GameObject camera in cameras)
+        {
+            camera.SetActive(false);
+        }
+        cameras[index].SetActive(true);
     }
 }
