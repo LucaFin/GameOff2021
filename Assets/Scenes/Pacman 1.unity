@@ -17556,7 +17556,7 @@ GameObject:
   - component: {fileID: 2145975249}
   - component: {fileID: 2145975248}
   m_Layer: 0
-  m_Name: photo_2021-11-16_16-22-45_-_Copia-removebg-preview
+  m_Name: backgroundMotherboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
