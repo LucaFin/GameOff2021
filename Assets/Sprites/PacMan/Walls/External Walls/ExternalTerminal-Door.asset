@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ExternalTerminalReduced
+  m_Name: ExternalTerminal-Door
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: bc73ebd2929f9b14c968ff0891eba494, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e3bcc92d0ee90f4f928522d15bc7969, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
