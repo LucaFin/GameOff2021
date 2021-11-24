@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && cooldown)
         {
             StartCoroutine(StartCooldown());
-            GameObject shot = Instantiate<GameObject>(Bullet, transform.position+new Vector3(xShoot,yShoot), Quaternion.identity);
+            GameObject shot = Instantiate<GameObject>(Bullet, transform.position+new Vector3(xShoot,yShoot+0.37f), Quaternion.identity);
             shot.transform.rotation = Quaternion.Euler(0, 0, z);
             shot.GetComponent<Rigidbody2D>().AddForce(new Vector2(xShoot, yShoot) *1000f);
         }
