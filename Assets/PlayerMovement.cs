@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         xMove = 0;
         yMove = 0;
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
         {
             yMove = 1;
             xMove = 0;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             xShoot = 0;
             z = 90;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             yMove = -1;
             xMove = 0;
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             xShoot = 0;
             z = -90;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             yMove = 0;
             xMove = -1;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             z = -180;
             sprite.flipX = true;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             yMove = 0;
             xMove = 1;
