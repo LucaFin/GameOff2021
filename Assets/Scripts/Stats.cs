@@ -7,6 +7,14 @@ public class Stats : MonoBehaviour
     [SerializeField]
     protected float life;
     protected float atkDamage;
+    [SerializeField]
+    float respawnTime=3f;
+
+    private float OriginalLife;
+    private void Start()
+    {
+        OriginalLife = life;
+    }
 
     public float GetDamage()
     {
@@ -22,7 +30,14 @@ public class Stats : MonoBehaviour
         life -= damage;
         if (life <= 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+            Invoke("Respawn", respawnTime);
         }
+    }
+
+    void Respawn()
+    {
+        PoolEnemy.poolEnemy.Respawn(this.gameObject);
+        life = OriginalLife;
     }
 }

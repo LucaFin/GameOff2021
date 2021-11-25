@@ -7,6 +7,7 @@ public class IntroTerminal : MonoBehaviour
 
     //Game state
     string input, input1;
+    [SerializeField] Terminal connectedToTerminal;
     enum Screen { MainMenu, Start, BUG };
     Screen currentScreen;
 
@@ -24,9 +25,10 @@ public class IntroTerminal : MonoBehaviour
 
     private void ShowStory(string s)
     {
+        string ns = s + '\n';
         foreach (char c in s)
         {
-            Terminal.WriteLine(c.ToString());
+            connectedToTerminal.ReceiveFrameInput(c.ToString());
             for (float i = 0; i < 1; i += Time.deltaTime)
             {
             }

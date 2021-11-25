@@ -20,7 +20,8 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < numberOfSpawned; i++)
         {
-            Instantiate<GameObject>(prefab, transform.position, Quaternion.identity);
+            GameObject mob = Instantiate<GameObject>(prefab, transform.position, Quaternion.identity);
+            PoolEnemy.poolEnemy.AddPool(mob,this.transform.position);
             yield return new WaitForSeconds(spawnRate);
         }
     }
