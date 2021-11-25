@@ -15,10 +15,12 @@ public class PlayerController : MonoBehaviour
     private Color opaque;
     private Color transparent;
     private SpriteRenderer spriteRenderer;
+    PlayerStat playerStat;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerStat playerStat = GetComponent<PlayerStat>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         opaque = spriteRenderer.color;
         transparent = new Color(opaque.r, opaque.g, opaque.b, 0f);
@@ -67,6 +69,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+
     private IEnumerator Invincible()
     {
         invincible = true;
@@ -84,7 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!invincible)
         {
-            PlayerStat.playerStat.InflictDamage(damage);
+            playerStat.InflictDamage(damage);
             StartCoroutine(Invincible());
         }
     }

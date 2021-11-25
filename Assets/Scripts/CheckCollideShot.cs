@@ -8,11 +8,10 @@ public class CheckCollideShot : MonoBehaviour
     private string target="Enemy";
     [SerializeField]
     private string shooter="Player";
-    private void Start()
-    {
-        Destroy(this.gameObject, 10f);
-    }
-    private void OnTriggerStay2D(Collider2D collision)
+    [SerializeField]
+    private bool destroyOnCollide;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals(target))
         {
@@ -20,9 +19,25 @@ public class CheckCollideShot : MonoBehaviour
             s.InflictDamage(1f);
         }
 
-        if (!collision.gameObject.tag.Equals(shooter))
+        if (!collision.gameObject.tag.Equals(shooter) && destroyOnCollide)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 0.01f);
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals(target))
+        {
+            Stats s = collision.gameObject.GetComponent<Stats>();
+            s.InflictDamage(1f);
+        }
+
+        if (!collision.gameObject.tag.Equals(shooter) && destroyOnCollide)
+        {
+            Destroy(this.gameObject, 0.01f);
+        }
+    }
+
+
 }

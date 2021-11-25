@@ -23,11 +23,19 @@ public class PlayerMovement : MonoBehaviour
     bool cooldown = true;
     Rigidbody2D rb;
     SpriteRenderer sprite;
+    private bool invincible;
+    private Color opaque;
+    private Color transparent;
+    PlayerStat playerStat;
+
     // Start is called before the first frame update
     private void Start()
     {
+        playerStat = GetComponent<PlayerStat>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        opaque = sprite.color;
+        transparent = new Color(opaque.r, opaque.g, opaque.b, 0f);
     }
 
     // Update is called once per frame
@@ -85,5 +93,42 @@ public class PlayerMovement : MonoBehaviour
         cooldown = false;
         yield return new WaitForSeconds(shotTime);
         cooldown = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+
+    private IEnumerator Invincible()
+    {
+        invincible = true;
+        for (int i = 0; i < 8; i++)
+        {
+            sprite.color = sprite.color.a == 0 ? opaque : transparent;
+            yield return new WaitForSeconds(0.3f);
+        }
+        sprite.color = opaque;
+        invincible = false;
+
+    }
+
+    private void TakeDamage(float damage)
+    {
+        if (!invincible)
+        {
+            playerStat.InflictDamage(damage);
+            StartCoroutine(Invincible());
+        }
     }
 }

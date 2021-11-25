@@ -20,5 +20,9 @@ public class Stats : MonoBehaviour
     public void InflictDamage(float damage)
     {
         life -= damage;
+        if (life <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
