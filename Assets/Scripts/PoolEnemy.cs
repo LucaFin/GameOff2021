@@ -18,7 +18,9 @@ public class PoolEnemy : MonoBehaviour
 
     public void Respawn(GameObject mob)
     {
-        mob.transform.position = pool.GetValueOrDefault(mob);
+        Vector3 mobPosition;
+        pool.TryGetValue(mob, out mobPosition);
+        mob.transform.position = mobPosition;
         mob.SetActive(true);
     }
 }
