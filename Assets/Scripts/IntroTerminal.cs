@@ -26,14 +26,19 @@ public class IntroTerminal : MonoBehaviour
     private void ShowStory(string s)
     {
         string ns = s + '\n';
+
+        StartCoroutine(Story(s));
+
+    }
+
+    IEnumerator Story(string s)
+    {
         foreach (char c in s)
         {
             connectedToTerminal.ReceiveFrameInput(c.ToString());
-            for (float i = 0; i < 1; i += Time.deltaTime)
-            {
-            }
-            
+            yield return new WaitForSeconds(0.1f);
         }
+        Keyboard.canWrite = true;
     }
 
     //

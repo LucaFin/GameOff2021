@@ -6,7 +6,7 @@ public class Keyboard : MonoBehaviour
 {
     [SerializeField] AudioClip[] keyStrokeSounds;
     [SerializeField] Terminal connectedToTerminal;
-
+    public static bool canWrite = false;
     AudioSource audioSource;
 
     private void Start()
@@ -27,14 +27,17 @@ public class Keyboard : MonoBehaviour
 
     private void Update()
     {
-        bool isValidKey = Input.inputString.Length > 0;
-        if (isValidKey)
+        if (canWrite)
         {
-            PlayRandomSound();
-        }
-        if (connectedToTerminal)
-        {
-            connectedToTerminal.ReceiveFrameInput(Input.inputString);
+            bool isValidKey = Input.inputString.Length > 0;
+            if (isValidKey)
+            {
+                PlayRandomSound();
+            }
+            if (connectedToTerminal)
+            {
+                connectedToTerminal.ReceiveFrameInput(Input.inputString);
+            }
         }
     }
 
