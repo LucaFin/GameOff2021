@@ -23,4 +23,12 @@ public class PoolEnemy : MonoBehaviour
         mob.transform.position = mobPosition;
         mob.SetActive(true);
     }
+
+    public void ClearPool()
+    {
+        foreach(GameObject mob in pool.Keys)
+        {
+            Destroy(mob);
+        }
+    }
 }

@@ -35,3 +35,5 @@ sysinfo.txt
 # Builds
 *.log
 Logs/*.log
+*.log
+Logs/shadercompiler-UnityShaderCompiler.exe2.log
