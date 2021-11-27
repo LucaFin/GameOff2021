@@ -298,3 +298,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedToTerminal: {fileID: 1478698379}
+  terminalSpeed: 0.01
