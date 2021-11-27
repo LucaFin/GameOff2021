@@ -398,7 +398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459180031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.2, y: 33.92, z: -10}
+  m_LocalPosition: {x: -36.87, y: 34.199997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -592,9 +592,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.37
+    x: 0.1
     y: 0
-    width: 0.7
+    width: 0.55
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -624,7 +624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.02, y: 10.3, z: -10}
+  m_LocalPosition: {x: -16.46, y: 10.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -638,7 +638,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 657ed29b2d31a004cb01267c1bd8a1ff, type: 2}
   m_CullingMode: 0
@@ -1498,7 +1498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418810438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.244, y: 33.867, z: 0}
+  m_LocalPosition: {x: -37.1, y: 34, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1.15231}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18808,39 +18808,39 @@ Tilemap:
       e33: 1
   - m_RefCount: 0
     m_Data:
-      e00: 0
-      e01: 0
-      e02: 0
-      e03: -4.2972584e-36
-      e10: 0
-      e11: 0
-      e12: 0
-      e13: 4.5904e-41
-      e20: 0
+      e00: 1.7324333
+      e01: 1.1e-44
+      e02: -6.333567e+12
+      e03: 0
+      e10: 1.64e-43
+      e11: NaN
+      e12: 4.5904e-41
+      e13: 0
+      e20: 3.971e-41
       e21: 0
-      e22: 0
-      e23: -2006428
+      e22: 1.7324314
+      e23: 0
       e30: 0
-      e31: 0
-      e32: 0
-      e33: 1.92e-43
+      e31: 7.34684e-40
+      e32: 1.64e-43
+      e33: 1
   - m_RefCount: 0
     m_Data:
-      e00: -2.3456317e+10
-      e01: NaN
-      e02: 1.2403277e+30
+      e00: 1.7324333
+      e01: 1.1e-44
+      e02: -6.333567e+12
       e03: 0
-      e10: 2.12e-43
-      e11: 4.8e-44
-      e12: 4.5905e-41
+      e10: 1.64e-43
+      e11: NaN
+      e12: 4.5904e-41
       e13: 0
-      e20: 4.6786575e-10
+      e20: 3.971e-41
       e21: 0
-      e22: -2.3456285e+10
+      e22: 1.7324314
       e23: 0
-      e30: 7.26e-43
+      e30: 0
       e31: 7.34684e-40
-      e32: 2.12e-43
+      e32: 1.64e-43
       e33: 1
   - m_RefCount: 1
     m_Data:
@@ -18898,12 +18898,12 @@ Tilemap:
       e33: 1
   - m_RefCount: 24
     m_Data:
-      e00: 0
-      e01: 1
+      e00: 0.000000059604645
+      e01: 0.99999994
       e02: 0
       e03: 0
-      e10: -1
-      e11: 0
+      e10: -0.99999994
+      e11: 0.000000059604645
       e12: 0
       e13: 0
       e20: 0
@@ -18953,7 +18953,7 @@ Animator:
   m_GameObject: {fileID: 1983856031}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2048fb45d90b5c44590992a6ffe2b756, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -19480,6 +19480,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: livelloCompletato
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: CameraFollowPlayer
+      value: 
+      objectReference: {fileID: 459180031}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: cameraFollowPlayer
+      value: 
+      objectReference: {fileID: 459180031}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: teleportPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: teleportPosition.y
+      value: -8.12
+      objectReference: {fileID: 0}
     - target: {fileID: 1110126255815406824, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_Name
       value: Key
@@ -19490,11 +19514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841070396622556875, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.46
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 3841070396622556875, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.12
+      value: -8.08
       objectReference: {fileID: 0}
     - target: {fileID: 3841070396622556875, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_LocalPosition.z

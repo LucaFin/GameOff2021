@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private Color opaque;
     private Color transparent;
     PlayerStat playerStat;
-
+    private bool switched=false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -77,10 +77,26 @@ public class PlayerMovement : MonoBehaviour
             z = 0;
             sprite.flipX = false;
         }
+        if (switched)
+        {
+            int app;
+            app = yMove;
+            yMove = xMove;
+            xMove = app;
+            yMove *= -1;
+        }
         rb.velocity = new Vector2(xMove, yMove) * force;
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && cooldown)
         {
             StartCoroutine(StartCooldown());
+            if (switched)
+            {
+                int app;
+                app = yShoot;
+                yShoot = xShoot;
+                xShoot = app;
+                yShoot *= -1;
+            }
             GameObject shot = Instantiate<GameObject>(Bullet, transform.position+new Vector3(xShoot,yShoot), Quaternion.identity);
             shot.transform.rotation = Quaternion.Euler(0, 0, z);
             shot.GetComponent<Rigidbody2D>().AddForce(new Vector2(xShoot, yShoot) *1000f);
@@ -110,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void setSwitched(bool flag)
+    {
+        switched = flag;
+    }
     private IEnumerator Invincible()
     {
         invincible = true;
