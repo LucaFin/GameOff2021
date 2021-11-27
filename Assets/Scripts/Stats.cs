@@ -25,7 +25,7 @@ public class Stats : MonoBehaviour
     {
         return life;
     }
-    public void InflictDamage(float damage)
+    public virtual void InflictDamage(float damage)
     {
         life -= damage;
         if (life <= 0)
