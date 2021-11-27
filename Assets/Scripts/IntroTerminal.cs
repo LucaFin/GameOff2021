@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroTerminal : MonoBehaviour
 {
@@ -15,13 +16,13 @@ public class IntroTerminal : MonoBehaviour
     void Start()
     {
         ShowMainMenu();
+        ShowStory("Main Menu" + '\n' + "Write space to Play" + '\n');
         Keyboard.canWrite = true;
     }
 
     void ShowMainMenu() //Funzione per visualizzare il terminale   
     {
         currentScreen = Screen.MainMenu;
-        Terminal.WriteLine("Welcome to aMazeBug game..");
         Terminal.WriteLine(@"
                   \_/
                  (* *)
@@ -30,8 +31,26 @@ public class IntroTerminal : MonoBehaviour
                || |_| ||//
             >==() | | ()/
                 _(___)_
-               [-]   [-]
+    Welcome to [-] a [-] MazeBug game
   ");
+    }
+
+    private void ShowStory(string s)
+    {
+        string ns = s + '\n';
+
+        StartCoroutine(Story(s));
+
+    }
+
+    IEnumerator Story(string s)
+    {
+        yield return new WaitForSeconds(2f);
+        foreach (char c in s)
+        {
+            connectedToTerminal.ReceiveFrameInput(c.ToString());
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     void OnUserInput(string input)
@@ -42,6 +61,10 @@ public class IntroTerminal : MonoBehaviour
             if (input == "menu")
             {
                 ShowMainMenu();
+            }
+            if (input == "space")
+            {
+                SceneManager.LoadScene(1);
             }
         }
 
