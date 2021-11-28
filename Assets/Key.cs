@@ -57,7 +57,7 @@ public class Key : MonoBehaviour
         {
             cameraFollowPlayer.SetActive(false);
             Camera.SetActive(true);
-            Camera.GetComponent<Animator>().SetTrigger("level1-2");
+            Camera.GetComponent<Animator>().SetTrigger("level");
             Player.GetComponent<PlayerMovement>().setSwitched(true);
             Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
             Player.transform.localScale = new Vector3(1, 1, 1);
@@ -65,7 +65,11 @@ public class Key : MonoBehaviour
         }
         if (livelloCompletato == 2)
         {
-            Debug.Log("inserire animazione apertura porta");
+            Camera.GetComponent<Animator>().SetTrigger("level");
+            Player.GetComponent<PlayerMovement>().setSwitched(false);
+            Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
+            Player.transform.localScale = new Vector3(1, 1, 1);
+            Player.GetComponent<PlayerMovement>().RefreshCollider();
         }
         if (livelloCompletato == 3)
         {

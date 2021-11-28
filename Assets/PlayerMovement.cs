@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private Color transparent;
     PlayerStat playerStat;
     private bool switched=false;
+    private bool trigger = false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             yShoot = 1;
             xShoot = 0;
             z = 90;
+            trigger = true;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
@@ -58,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
             yShoot = -1;
             xShoot = 0;
             z = -90;
+            trigger = true;
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -67,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
             xShoot = -1;
             z = -180;
             sprite.flipX = true;
+            trigger = true;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -76,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
             xShoot = 1;
             z = 0;
             sprite.flipX = false;
+            trigger = true;
         }
         if (switched)
         {
@@ -89,13 +94,15 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && cooldown)
         {
             StartCoroutine(StartCooldown());
-            if (switched)
+            if (switched && trigger)
             {
                 int app;
                 app = yShoot;
                 yShoot = xShoot;
                 xShoot = app;
                 yShoot *= -1;
+                trigger = false;
+                z -= 90;
             }
             GameObject shot = Instantiate<GameObject>(Bullet, transform.position+new Vector3(xShoot,yShoot), Quaternion.identity);
             shot.transform.rotation = Quaternion.Euler(0, 0, z);
