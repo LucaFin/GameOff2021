@@ -31,7 +31,14 @@ public class Stats : MonoBehaviour
         if (life <= 0)
         {
             this.gameObject.SetActive(false);
-            Invoke("Respawn", respawnTime);
+            if (respawnTime >= 0)
+            {
+                Invoke("Respawn", respawnTime);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 

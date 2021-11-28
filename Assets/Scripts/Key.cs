@@ -41,8 +41,9 @@ public class Key : MonoBehaviour
         Player.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
         while (Player.transform.position != teleportPosition)
         {
-            Player.transform.position = Vector3.MoveTowards(Player.transform.position, teleportPosition,1f );
+            //Player.transform.position = Vector3.MoveTowards(Player.transform.position, teleportPosition,1f );
             yield return new WaitForSeconds(0.1f);
+            Player.transform.position = teleportPosition;
         }
         Player.GetComponent<Collider2D>().isTrigger = false;
         Player.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
@@ -57,7 +58,7 @@ public class Key : MonoBehaviour
         {
             cameraFollowPlayer.SetActive(false);
             Camera.SetActive(true);
-            Camera.GetComponent<Animator>().SetTrigger("level");
+            Camera.GetComponent<Animator>().SetTrigger("level1-2");
             Player.GetComponent<PlayerMovement>().setSwitched(true);
             Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
             Player.transform.localScale = new Vector3(1, 1, 1);
@@ -65,7 +66,7 @@ public class Key : MonoBehaviour
         }
         if (livelloCompletato == 2)
         {
-            Camera.GetComponent<Animator>().SetTrigger("level");
+            Camera.GetComponent<Animator>().SetTrigger("level2-3");
             Player.GetComponent<PlayerMovement>().setSwitched(false);
             Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
             Player.transform.localScale = new Vector3(1, 1, 1);
