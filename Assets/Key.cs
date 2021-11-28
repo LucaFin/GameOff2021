@@ -16,6 +16,8 @@ public class Key : MonoBehaviour
     GameObject Camera;
     [SerializeField]
     GameObject cameraFollowPlayer;
+    [SerializeField]
+    Sprite spriteNextLevel;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
@@ -57,6 +59,9 @@ public class Key : MonoBehaviour
             Camera.SetActive(true);
             Camera.GetComponent<Animator>().SetTrigger("level1-2");
             Player.GetComponent<PlayerMovement>().setSwitched(true);
+            Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
+            Player.transform.localScale = new Vector3(1, 1, 1);
+            Player.GetComponent<PlayerMovement>().RefreshCollider();
         }
         if (livelloCompletato == 2)
         {
