@@ -151,4 +151,10 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Invincible());
         }
     }
+
+    public void RefreshCollider()
+    {
+        Destroy(GetComponent<PolygonCollider2D>());
+        this.gameObject.AddComponent<PolygonCollider2D>();
+    }
 }
