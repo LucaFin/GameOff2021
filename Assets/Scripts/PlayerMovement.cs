@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         xMove = 0;
         yMove = 0;
-        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             yMove = 1;
             xMove = 0;
@@ -104,11 +104,14 @@ public class PlayerMovement : MonoBehaviour
                 trigger = false;
                 z -= 90;
             }
-            GameObject shot = Instantiate<GameObject>(Bullet, transform.position+new Vector3(xShoot,yShoot), Quaternion.identity);
+            GameObject shot = Instantiate<GameObject>(Bullet, transform.position + new Vector3(xShoot, yShoot), Quaternion.identity);
             shot.transform.rotation = Quaternion.Euler(0, 0, z);
-            shot.GetComponent<Rigidbody2D>().AddForce(new Vector2(xShoot, yShoot) *1000f);
+            shot.GetComponent<Rigidbody2D>().AddForce(new Vector2(xShoot, yShoot) * 1000f);
         }
-        Camera.setCameraOnPlayer();
+        if (Camera.gameObject.activeInHierarchy)
+        {
+            Camera.setCameraOnPlayer();
+        }
     }
 
     IEnumerator StartCooldown()
