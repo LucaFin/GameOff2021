@@ -4,19 +4,6 @@ using UnityEngine;
 
 public class PlayerMovementLv2 : PlayerMovement
 {
-    private void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        if (Time.timeScale > 0)
-        {
-            Movement();
-            Attack();
-        }
-    }
     public override void Attack()
     {
         xShoot = transform.rotation.x;
