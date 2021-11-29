@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Camera3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,6 +2231,7 @@ GameObject:
   - component: {fileID: 1418810443}
   - component: {fileID: 1418810444}
   - component: {fileID: 1418810445}
+  - component: {fileID: 1418810440}
   m_Layer: 7
   m_Name: CovidPlayer
   m_TagString: Player
@@ -2259,6 +2260,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1418810440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418810438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebeee74a5b3d7444ab0d8d2513b1155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNext: {fileID: 3776621025604008788, guid: a566f4bda1e8fa54b8492e336e2b802d, type: 3}
 --- !u!212 &1418810441
 SpriteRenderer:
   m_ObjectHideFlags: 0

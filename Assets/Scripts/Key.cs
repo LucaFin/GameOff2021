@@ -22,7 +22,6 @@ public class Key : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            StartCoroutine(TeleportPlayer());
             UnlockDoor();
         }
     }
@@ -54,6 +53,7 @@ public class Key : MonoBehaviour
     {
         if (livelloCompletato == 1)
         {
+            StartCoroutine(TeleportPlayer());
             cameraFollowPlayer.SetActive(false);
             Camera.SetActive(true);
             Camera.GetComponent<Animator>().SetTrigger("level1-2");
@@ -66,13 +66,11 @@ public class Key : MonoBehaviour
         {
             Camera.GetComponent<Animator>().SetTrigger("level2-3");
             Player.GetComponent<PlayerMovement>().setSwitched(false);
-            Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
             Player.transform.localScale = new Vector3(1, 1, 1);
-            Player.GetComponent<PlayerMovement>().RefreshCollider();
+            Player.GetComponent<LevelUp>().evolve(teleportPosition);
         }
         if (livelloCompletato == 3)
         {
-            Debug.Log("inserire animazione apertura porta");
         }
         PoolEnemy.poolEnemy.ClearPool();
         foreach (GameObject spawn in spawner)
