@@ -11,6 +11,7 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         offset = transform.position - Player.transform.position;
+        QualitySettings.vSyncCount = 1;
     }
 
     public void setCameraOnPlayer()

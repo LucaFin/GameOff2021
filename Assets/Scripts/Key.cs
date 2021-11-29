@@ -52,8 +52,6 @@ public class Key : MonoBehaviour
 
     private void UnlockDoor()
     {
-
-        PoolEnemy.poolEnemy.ClearPool();
         if (livelloCompletato == 1)
         {
             cameraFollowPlayer.SetActive(false);
@@ -76,6 +74,7 @@ public class Key : MonoBehaviour
         {
             Debug.Log("inserire animazione apertura porta");
         }
+        PoolEnemy.poolEnemy.ClearPool();
         foreach (GameObject spawn in spawner)
         {
             spawn.SetActive(true);
