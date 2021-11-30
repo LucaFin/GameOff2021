@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float shotTime = 1f;
     [SerializeField]
-    protected GameObject Bullet;
+    public GameObject Bullet;
     [SerializeField]
     CameraFollowPlayer Camera;
     int xMove = 1;
