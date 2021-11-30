@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 275236606}
   - component: {fileID: 7316658672325962776}
   - component: {fileID: 6350586817099036388}
+  - component: {fileID: 1110725164144669928}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 2.4, y: 2.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &275236607
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 30
   respawnTime: 10000
+  prefab: {fileID: 0}
 --- !u!114 &6350586817099036388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +190,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: {fileID: 0}
+--- !u!114 &1110725164144669928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437540207304833531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70135e045046f447a3affcb98bad94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,7 +9,9 @@ public class Stats : MonoBehaviour
     protected float atkDamage;
     [SerializeField]
     float respawnTime=3f;
-
+    [SerializeField]
+    private GameObject prefab;
+    private GameObject explosion;
     private float OriginalLife;
     private void Start()
     {
@@ -31,9 +33,11 @@ public class Stats : MonoBehaviour
         if (life <= 0)
         {
             this.gameObject.SetActive(false);
+            explosion=Instantiate<GameObject>(prefab, transform.position, Quaternion.identity);
             if (respawnTime >= 0)
             {
                 Invoke("Respawn", respawnTime);
+                Invoke("DestroyPrefab", 2f);
             }
             else
             {
@@ -46,5 +50,11 @@ public class Stats : MonoBehaviour
     {
         PoolEnemy.poolEnemy.Respawn(this.gameObject);
         life = OriginalLife;
+    }
+
+
+    private void DestroyPrefab()
+    {
+        Destroy(explosion);
     }
 }
