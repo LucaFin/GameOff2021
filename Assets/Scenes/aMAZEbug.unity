@@ -176,6 +176,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128791637, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 231738630}
     - target: {fileID: 3781176013682282295, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -376,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &107418092
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -733,12 +737,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231738630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.041, y: 16.087, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: -0.008000056, y: -0.013999939, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_Father: {fileID: 1362973676}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275236605 stripped
 GameObject:
@@ -2438,6 +2442,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8739193832770970514, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
   m_PrefabInstance: {fileID: 81577526}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1362973676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8739193832770970516, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
+  m_PrefabInstance: {fileID: 81577526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1418810438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,7 +3184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1840150842
 GameObject:
@@ -3196,7 +3205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1840150843
 Animator:
   serializedVersion: 3
