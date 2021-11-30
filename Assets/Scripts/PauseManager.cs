@@ -34,6 +34,10 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ChangePauseStatus();
     }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     public void returnToMain()
     {
@@ -45,7 +49,6 @@ public class PauseManager : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0;
-
             BackgroundAudio.Pause();
         }
         else

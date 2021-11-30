@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image[] healthbar;
     public static UIManager uIManager;
+    public GameObject pnlGameOver;
 
 
     private void Awake()
@@ -23,6 +24,11 @@ public class UIManager : MonoBehaviour
                 health.gameObject.SetActive(false);
                 damage--;
             }
+        }
+        if (!healthbar[4].gameObject.activeInHierarchy)
+        {
+            pnlGameOver.SetActive(true);
+            
         }
     }
 }
