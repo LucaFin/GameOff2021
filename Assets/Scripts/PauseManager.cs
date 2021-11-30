@@ -7,6 +7,7 @@ public class PauseManager : MonoBehaviour
 {
     bool isPaused;
     public GameObject pnlPause;
+    public AudioSource BackgroundAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,10 +45,13 @@ public class PauseManager : MonoBehaviour
         if (isPaused)
         {
             Time.timeScale = 0;
+
+            BackgroundAudio.Pause();
         }
         else
         {
             Time.timeScale = 1;
+            BackgroundAudio.Play();
         }
         pnlPause.SetActive(isPaused);
     }
