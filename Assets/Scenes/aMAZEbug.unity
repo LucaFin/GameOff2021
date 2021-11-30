@@ -488,6 +488,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128791637, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1269135234}
     - target: {fileID: 3781176013682282295, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -664,7 +668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &231738631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1644,7 +1648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &625918040
 Transform:
   m_ObjectHideFlags: 0
@@ -2269,7 +2273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1269135235
 Transform:
   m_ObjectHideFlags: 0
@@ -2361,6 +2365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128791637, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 625918039}
     - target: {fileID: 3781176013682282295, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -3079,7 +3087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1446405146
 Transform:
   m_ObjectHideFlags: 0
@@ -22178,6 +22186,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128791637, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1446405145}
     - target: {fileID: 3781176013682282295, guid: 30fb73289d5b72f48acc2f58fdadbc5f, type: 3}
       propertyPath: m_GravityScale
       value: 0
