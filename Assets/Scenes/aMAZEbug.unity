@@ -1333,6 +1333,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420028}
     - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: NextBullet
+      value: 
+      objectReference: {fileID: 1398389536647704971, guid: 4465d839f048c994096a6662fac605f6, type: 3}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: spriteNextLevel
       value: 
       objectReference: {fileID: 21300000, guid: deb6645a7311f8440840cb2bf9056e41, type: 3}
@@ -21901,6 +21905,10 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
+      propertyPath: NextBullet
+      value: 
+      objectReference: {fileID: 1398389536647704971, guid: 4465d839f048c994096a6662fac605f6, type: 3}
     - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: spriteNextLevel
       value: 
