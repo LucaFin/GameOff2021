@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4960443799672709537, guid: 89a30e388a76ff0439c37a790a0d8940, type: 3}
   spawnRate: 2
-  numberOfSpawned: 3
+  numberOfSpawned: 1
 --- !u!4 &8344028
 Transform:
   m_ObjectHideFlags: 0
@@ -2010,11 +2010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3841070396622556875, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.30000007
+      value: 0.30000013
       objectReference: {fileID: 0}
     - target: {fileID: 3841070396622556875, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.30000007
+      value: 0.30000013
       objectReference: {fileID: 0}
     - target: {fileID: 3841070396622556875, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4501,7 +4501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4960443799672709537, guid: 89a30e388a76ff0439c37a790a0d8940, type: 3}
   spawnRate: 2
-  numberOfSpawned: 3
+  numberOfSpawned: 1
 --- !u!4 &1331603303
 Transform:
   m_ObjectHideFlags: 0
@@ -4975,7 +4975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4960443799672709537, guid: 89a30e388a76ff0439c37a790a0d8940, type: 3}
   spawnRate: 2
-  numberOfSpawned: 3
+  numberOfSpawned: 1
 --- !u!4 &1420150881
 Transform:
   m_ObjectHideFlags: 0
@@ -5379,7 +5379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4960443799672709537, guid: 89a30e388a76ff0439c37a790a0d8940, type: 3}
   spawnRate: 2
-  numberOfSpawned: 3
+  numberOfSpawned: 1
 --- !u!4 &1534226984
 Transform:
   m_ObjectHideFlags: 0
@@ -24262,11 +24262,11 @@ PrefabInstance:
     - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: NextBullet
       value: 
-      objectReference: {fileID: 1398389536647704971, guid: 4465d839f048c994096a6662fac605f6, type: 3}
+      objectReference: {fileID: 1398389536647704971, guid: e0781d611827da9439fe101588df1c0d, type: 3}
     - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: spriteNextLevel
       value: 
-      objectReference: {fileID: 21300000, guid: deb6645a7311f8440840cb2bf9056e41, type: 3}
+      objectReference: {fileID: 21300000, guid: cf2769763af7bce4c988bb314e53f2eb, type: 3}
     - target: {fileID: -8261015893978956342, guid: 730a41cd5fd79754eb5172e849651b83, type: 3}
       propertyPath: livelloCompletato
       value: 1
