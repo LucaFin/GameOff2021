@@ -13,4 +13,11 @@ public class PlayerStat : Stats
             Destroy(this.gameObject);
         }
     }
+
+    public override void ResetLife()
+    {
+        base.ResetLife();
+        UIManager.uIManager.ResetLife();
+
+    }
 }

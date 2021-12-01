@@ -31,4 +31,12 @@ public class UIManager : MonoBehaviour
             
         }
     }
+
+    public void ResetLife()
+    {
+        foreach(Image health in healthbar)
+        {
+            health.gameObject.SetActive(true);
+        }
+    }
 }

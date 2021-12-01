@@ -61,4 +61,9 @@ public class Stats : MonoBehaviour
     {
         Destroy(explosion);
     }
+
+    public virtual void ResetLife()
+    {
+        life = OriginalLife;
+    }
 }

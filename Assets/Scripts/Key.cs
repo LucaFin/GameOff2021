@@ -54,6 +54,7 @@ public class Key : MonoBehaviour
 
     private void UnlockDoor()
     {
+        Player.GetComponent<PlayerStat>().ResetLife();
         if (livelloCompletato == 1)
         {
             StartCoroutine(TeleportPlayer());
