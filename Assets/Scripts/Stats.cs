@@ -33,7 +33,10 @@ public class Stats : MonoBehaviour
         if (life <= 0)
         {
             this.gameObject.SetActive(false);
-            explosion=Instantiate<GameObject>(prefab, transform.position, Quaternion.identity);
+            if (prefab != null)
+            {
+                explosion = Instantiate<GameObject>(prefab, transform.position, Quaternion.identity);
+            }
             if (respawnTime >= 0)
             {
                 Invoke("Respawn", respawnTime);
