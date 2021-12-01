@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5087959841270340745}
   - component: {fileID: 3945117724206058389}
   m_Layer: 9
-  m_Name: shot-2
+  m_Name: Shoot Lv1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,9 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398389536647704971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.705968, y: -3.412272, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0.8396636}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -6.705968, y: -3.4, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,7 +46,6 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -77,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 459f16e72cf7847d0b60fed8fd249a54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd7c9a34688295341a20a69eff794dbb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,8 +120,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011296833, y: -0.0008690047}
-  m_Size: {x: 0.10220748, y: 0.070056215}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 0.35}
   m_Direction: 1
 --- !u!114 &-5087959841270340745
 MonoBehaviour:
