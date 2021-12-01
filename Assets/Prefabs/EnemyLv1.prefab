@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4960443799672709594}
   - component: {fileID: -2167336994790524225}
   m_Layer: 8
-  m_Name: AnticorpoEnemyPlayer
+  m_Name: EnemyLv1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
