@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/aMAZEbug.unity
     guid: 5e188672eed4b5949a6c86bb962e8aa9
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 3af08576bb197ea429854afd984954b3
   m_configObjects: {}
