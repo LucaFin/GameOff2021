@@ -6,6 +6,8 @@ public class checkActivate : MonoBehaviour
 {
     [SerializeField]
     List<GameObject> factory;
+    [SerializeField]
+    GameObject end;
 
     private void OnDisable()
     {
@@ -20,6 +22,7 @@ public class checkActivate : MonoBehaviour
         if (!flag)
         {
             PoolEnemy.poolEnemy.ClearPool();
+            end.SetActive(true);
         }
     }
 }
