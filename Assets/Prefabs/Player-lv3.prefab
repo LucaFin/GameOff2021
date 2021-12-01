@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5275133890794205323}
   m_Layer: 7
   m_Name: Player-lv3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 5
+  atkDamage: 1
   respawnTime: 3
+  prefab: {fileID: 0}
 --- !u!60 &2989843316410633235
 PolygonCollider2D:
   m_ObjectHideFlags: 0

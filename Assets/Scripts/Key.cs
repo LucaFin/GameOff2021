@@ -75,7 +75,6 @@ public class Key : MonoBehaviour
             Player.transform.localScale = new Vector3(1, 1, 1);
             Player.GetComponent<LevelUp>().evolve(teleportPosition);
             Player.GetComponent<PlayerMovement>().Bullet = NextBullet;
-            SceneManager.LoadScene("FinalScene");
         }
         
         if (livelloCompletato == 3)
