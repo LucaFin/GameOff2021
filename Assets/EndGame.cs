@@ -7,6 +7,6 @@ public class EndGame : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("CreditScene");
+        SceneManager.LoadScene("CreditsScene");
     }
 }

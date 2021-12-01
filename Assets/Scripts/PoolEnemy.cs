@@ -28,8 +28,11 @@ public class PoolEnemy : MonoBehaviour
     {
         foreach(GameObject mob in pool.Keys)
         {
-            mob.GetComponent<Stats>().InflictDamage(10000f);
-            Destroy(mob,1.5f);
+            if (mob != null)
+            {
+                mob.GetComponent<Stats>().InflictDamage(10000f);
+                Destroy(mob, 1.5f);
+            }
         }
     }
 }

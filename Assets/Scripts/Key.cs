@@ -67,7 +67,6 @@ public class Key : MonoBehaviour
             Player.GetComponent<PlayerMovement>().RefreshCollider();
             Player.GetComponent<PlayerMovement>().Bullet=NextBullet;
 
-
         }
         if (livelloCompletato == 2)
         {
