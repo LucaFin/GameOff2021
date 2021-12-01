@@ -189,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
         if (this.gameObject.GetComponent<CircleCollider2D>() == null)
         {
             this.gameObject.AddComponent<CircleCollider2D>();
-            this.gameObject.GetComponent<CircleCollider2D>().radius = 0.8f;
+            this.gameObject.GetComponent<CircleCollider2D>().radius = 2.6f;
         }
     }
 }
