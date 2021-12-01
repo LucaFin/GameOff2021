@@ -42,7 +42,10 @@ public class PauseManager : MonoBehaviour
     public void returnToMain()
     {
         SceneManager.LoadScene("IntroScene");
-        ChangePauseStatus();
+        if (isPaused)
+        {
+            ChangePauseStatus();
+        }
     }
     void UpdateGamePause()
     {
