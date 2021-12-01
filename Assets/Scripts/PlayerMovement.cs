@@ -149,6 +149,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            TakeDamage(1f);
+        }
+    }
+
     public void setSwitched(bool flag)
     {
         switched = flag;
