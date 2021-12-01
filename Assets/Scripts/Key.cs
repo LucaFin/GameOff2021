@@ -73,7 +73,7 @@ public class Key : MonoBehaviour
         {
             Camera.GetComponent<Animator>().SetTrigger("level2-3");
             Player.GetComponent<PlayerMovement>().setSwitched(false);
-            Player.transform.localScale = new Vector3(1, 1, 1);
+            Player.transform.localScale = new Vector3(1.25f, 1.25f, 1);
             Player.GetComponent<LevelUp>().evolve(teleportPosition);
             Player.GetComponent<PlayerMovement>().Bullet = NextBullet;
         }

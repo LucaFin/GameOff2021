@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3776621025604008788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -37.1, y: 33.85, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1.15231}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1.15231}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 10
   shotTime: 0.3
-  Bullet: {fileID: 1398389536647704971, guid: 4465d839f048c994096a6662fac605f6, type: 3}
+  Bullet: {fileID: 1398389536647704971, guid: 6b13be0459f879c4d8c915a2ecd2333c, type: 3}
   Camera: {fileID: 4783035661883875821, guid: 68b4e937e249224448c68e6bc3d4aa1b, type: 3}
 --- !u!114 &5275133890794205323
 MonoBehaviour:

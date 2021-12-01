@@ -211,7 +211,7 @@ MonoBehaviour:
   life: 10
   atkDamage: 1
   respawnTime: 3
-  prefab: {fileID: 6619281010150097319, guid: 0222c28f4c55a46428a71ae8bfa678ff, type: 3}
+  prefab: {fileID: 5373371547739170310, guid: 5866d915758b3794d9c625b3fe107d18, type: 3}
 --- !u!60 &4960443799672709594
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd745983b3ed00408619798f478f201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 5373371547739170310, guid: 5866d915758b3794d9c625b3fe107d18, type: 3}
 --- !u!1 &4960443800982979220
 GameObject:
   m_ObjectHideFlags: 0
