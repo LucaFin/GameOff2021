@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 10
+  atkDamage: 1
   respawnTime: 3
   prefab: {fileID: 6619281010150097319, guid: 0222c28f4c55a46428a71ae8bfa678ff, type: 3}
 --- !u!60 &4960443799672709594
@@ -529,6 +530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4960443800982979221}
   - component: {fileID: 4960443800982979222}
+  - component: {fileID: 3267740089946977351}
   m_Layer: 10
   m_Name: EnemyPlayerCollider
   m_TagString: Untagged
@@ -566,3 +568,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!50 &3267740089946977351
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960443800982979220}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 69fb524371b392943a72b19deeb61fdc, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

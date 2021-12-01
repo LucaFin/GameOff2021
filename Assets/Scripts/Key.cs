@@ -63,7 +63,7 @@ public class Key : MonoBehaviour
             Camera.GetComponent<Animator>().SetTrigger("level1-2");
             Player.GetComponent<PlayerMovement>().setSwitched(true);
             Player.GetComponent<SpriteRenderer>().sprite = spriteNextLevel;
-            Player.transform.localScale = new Vector3(1, 1, 1);
+            Player.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             Player.GetComponent<PlayerMovement>().RefreshCollider();
             Player.GetComponent<PlayerMovement>().Bullet=NextBullet;
 

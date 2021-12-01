@@ -14,7 +14,12 @@ public class LookAtPlayer : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Player")) {
+            if (go.activeSelf)
+            {
+                Player = go;
+            }
+        }
     }
     // Update is called once per frame
     private void Update()
@@ -23,11 +28,9 @@ public class LookAtPlayer : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (cam.gameObject.activeInHierarchy)
-        {
-            LookDir = PlayerPosition - rb.position;
-            angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg - 90f;
-            rb.rotation = angle;
-        }
+       
+        LookDir = PlayerPosition - rb.position;
+        angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 }
