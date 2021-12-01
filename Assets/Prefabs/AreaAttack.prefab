@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1454590978716269704}
   - component: {fileID: 1454590978716269815}
   - component: {fileID: 731918127476364110}
+  - component: {fileID: 6403708037633358023}
   m_Layer: 11
   m_Name: AreaAttack
   m_TagString: Enemy
@@ -163,3 +164,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &6403708037633358023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454590978716269810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e84f35243684f14bb7085ecf84ba68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 9999999
+  atkDamage: 1
+  respawnTime: 9999999
+  prefab: {fileID: 0}
