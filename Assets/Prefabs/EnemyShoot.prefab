@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7934310576678074630}
   - component: {fileID: -5087959841270340745}
   - component: {fileID: 3945117724206058389}
+  - component: {fileID: 5682262245006253320}
   m_Layer: 9
   m_Name: EnemyShoot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,3 +151,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01c8c821d3277247bf110f8873da243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5682262245006253320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398389536647704971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e84f35243684f14bb7085ecf84ba68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1000000
+  atkDamage: 1
+  respawnTime: 1000000
+  prefab: {fileID: 0}

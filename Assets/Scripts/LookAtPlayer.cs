@@ -14,7 +14,8 @@ public class LookAtPlayer : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Player")) {
+        GameObject[] vectorGO = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject go in vectorGO) {
             if (go.activeSelf)
             {
                 Player = go;

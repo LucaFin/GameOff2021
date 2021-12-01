@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(shotTime);
         cooldown = true;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
@@ -141,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    protected void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
@@ -149,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
