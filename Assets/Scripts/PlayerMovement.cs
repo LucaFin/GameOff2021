@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
-            TakeDamage(1f);
+            TakeDamage(collision.gameObject.GetComponent<Stats>().GetDamage());
         }
     }
 
@@ -145,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Enemy"))
         {
-            TakeDamage(1f);
+            TakeDamage(collision.gameObject.GetComponent<Stats>().GetDamage());
         }
     }
 

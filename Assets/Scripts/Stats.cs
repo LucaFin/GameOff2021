@@ -6,7 +6,8 @@ public class Stats : MonoBehaviour
 {
     [SerializeField]
     protected float life;
-    protected float atkDamage;
+    [SerializeField]
+    protected float atkDamage=1;
     [SerializeField]
     float respawnTime=3f;
     [SerializeField]
